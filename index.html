@@ -3,6 +3,22 @@
   <title>Benmari - Eridigimiz Nokta </title>
   <meta name="description" content="Benmari - Eridigimiz Nokta">
   <meta name="keywords" content="arkadas, üniversite, sosyal, benmari">
+  <script>
+    $(document).ready(function() {	
+  
+  		var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
+  		var eventer = window[eventMethod];
+  		var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
+  		
+  		eventer(messageEvent,function(e) {
+  			if (e.origin !== "http://http://benmari.eu01.aws.af.cm")
+      			return;
+      		else
+  		  		document.title = e.data;
+  		},false);
+  	  	
+  	});
+  </script>
 </head>
 <frameset rows="100%,*" border="0">
   <frame src="http://benmari.eu01.aws.af.cm" frameborder="0">
