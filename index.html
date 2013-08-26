@@ -7,7 +7,9 @@
   <script>
     $(document).ready(function() {	
       
-      alert(document.getElementsByTagName("frame")[0].document.title);
+      var title = $( "#benmari").contents( ).find( "title").html( );
+      
+      alert(title);
   
   		var eventMethod = window.addEventListener ? "addEventListener" : "attachEvent";
   		var eventer = window[eventMethod];
@@ -24,6 +26,6 @@
   </script>
 </head>
 <frameset rows="100%,*" border="0">
-  <frame src="http://benmari.eu01.aws.af.cm" frameborder="0">
+  <frame id="benmari" src="http://benmari.eu01.aws.af.cm" frameborder="0">
 </frameset>
 </html>
