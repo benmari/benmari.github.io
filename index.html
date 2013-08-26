@@ -11,7 +11,7 @@
   		var messageEvent = eventMethod == "attachEvent" ? "onmessage" : "message";
   		
   		eventer(messageEvent,function(e) {
-  			if (e.origin !== "http://http://benmari.eu01.aws.af.cm")
+  			if (e.origin !== "http://benmari.eu01.aws.af.cm")
       			return;
       		else
   		  		document.title = e.data;
